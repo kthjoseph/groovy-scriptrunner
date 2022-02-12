@@ -29,14 +29,4 @@ customFieldObjects.each {
     }
 }
 
-/* Testing only
-def field1 = customFieldObjects.findByName("Num1")
-def field2 = customFieldObjects.findByName("Num2")
-def value1 = issue.getCustomFieldValue(field1) as Integer;
-def value2 = issue.getCustomFieldValue(field2) as Integer;
-mylog.debug("Field value 1 = " + value1)
-mylog.debug("Field value 2 = " + value2)
-value1 = value1 == null ? 0 : value1
-value2 = value2 == null ? 0 : value2
-*/
 return sum

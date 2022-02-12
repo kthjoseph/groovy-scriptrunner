@@ -8,12 +8,11 @@ import com.atlassian.jira.issue.search.SearchResults;
 import com.atlassian.jira.bc.issue.search.SearchService;
 import com.atlassian.query.Query;
 
-import org.apache.log4j.Level
-import org.apache.log4j.Logger
-
-def mylog = Logger.getLogger("com.adaptavist.test")
-mylog.setLevel(Level.DEBUG)
-mylog.debug("Serach issue start")
+// import org.apache.log4j.Level
+// import org.apache.log4j.Logger
+// def mylog = Logger.getLogger("com.adaptavist.test")
+// mylog.setLevel(Level.DEBUG)
+// mylog.debug("Serach issue start")
 
 def authContext = ComponentAccessor.getJiraAuthenticationContext()
 ApplicationUser actor = authContext.getLoggedInUser()
@@ -23,7 +22,7 @@ IssueService issueService = ComponentAccessor.getIssueService()
 
 Query query = jqlQueryParser.parseQuery("status not in ('Closed', 'Done')")
 SearchResults results = searchService.search(actor, query,PagerFilter.getUnlimitedFilter())
-mylog.debug("All issues=" + results.getResults())
+// mylog.debug("All issues=" + results.getResults())
 
 results.getResults() //gives you array of issues returned by the JQL
 
